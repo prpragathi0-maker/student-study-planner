@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom | Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2 class="logo">✿ bloom<span>.</span></h2>
+    <p class="side-label">YOUR WORKSPACE</p>
+    <a href="#dashboard" class="nav-link active">⌂ Dashboard</a>
+    <a href="#planner" class="nav-link">▦ My Planner</a>
+    <a href="#focus" class="nav-link">◷ Focus Room</a>
+    <div class="sidebar-note">
+      <span>🌱</span>
+      <h3>Little steps,<br>big progress.</h3>
+      <p>You're doing better than you think.</p>
+    </div>
+  </aside>
+
+  <main class="main" id="dashboard">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" id="today"></p>
+        <h1>Your little corner<br>of productivity <span>✧</span></h1>
+        <p class="subtitle">A calmer way to plan your study days.</p>
+      </div>
+      <div class="avatar">♡</div>
+    </header>
+
+    <section class="stats">
+      <article class="stat-card lilac">
+        <span>Tasks today</span>
+        <strong id="total">0</strong>
+        <p>Your goals, one by one ✿</p>
+      </article>
+      <article class="stat-card sage">
+        <span>Completed</span>
+        <strong id="completed">0</strong>
+        <p>Every little win counts!</p>
+      </article>
+      <article class="stat-card peach">
+        <span>Progress</span>
+        <strong id="percent">0%</strong>
+        <div class="progress-track">
+          <div id="progress-bar"></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel" id="planner">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">MAKE IT HAPPEN</p>
+            <h2>Today's study plan</h2>
+          </div>
+          <span class="flower">✿</span>
+        </div>
+
+        <form id="task-form">
+          <label for="task-input">What do you want to study?</label>
+          <input id="task-input" type="text"
+            placeholder="e.g. Revise Microprocessor..." required>
+
+          <div class="form-row">
+            <div>
+              <label for="subject">Subject</label>
+              <select id="subject">
+                <option>Computer Science</option>
+                <option>English</option>
+                <option>Tamil</option>
+                <option>Mathematics</option>
+                <option>Physics</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="task-time">Study time</label>
+              <input id="task-time" type="time" required>
+            </div>
+          </div>
+          <button class="primary-btn" type="submit">+ Add study task</button>
+        </form>
+
+        <div class="task-heading">
+          <h3>Your tasks</h3>
+          <span id="task-count">0 tasks</span>
+        </div>
+        <div id="task-list" class="task-list"></div>
+      </article>
+
+      <article class="panel focus-panel" id="focus">
+        <p class="eyebrow">SLOW DOWN & FOCUS</p>
+        <h2>Your focus room</h2>
+        <p class="subtitle">One thing at a time. You've got this.</p>
+
+        <div class="timer-circle">
+          <div>
+            <strong id="timer">25:00</strong>
+            <span>MINUTES OF FOCUS</span>
+          </div>
+        </div>
+        <div class="timer-buttons">
+          <button id="start-btn" class="primary-btn">Start focus</button>
+          <button id="reset-btn" class="secondary-btn">Reset</button>
+        </div>
+        <div class="focus-tip">
+          <span>☕</span>
+          <div>
+            <strong>A tiny reminder</strong>
+            <p>Keep your phone away and give yourself a little space to learn.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>Made with ♡ for your learning journey.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
